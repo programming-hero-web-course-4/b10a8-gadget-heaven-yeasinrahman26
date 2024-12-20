@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 
 
@@ -51,7 +51,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+          <Link to={'/'} className="text-white lg:ml-10 font-bold text-xl">Gadget Heaven</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

@@ -1,0 +1,172 @@
+[
+  {
+    "product_id": "L001",
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co.com/rQn8bR0/Dell-XPS-13.jpg",
+    "category": "Laptops",
+    "price": 999,
+    "description": "Compact and powerful ultrabook with a stunning 13.3-inch InfinityEdge display.",
+    "specification": [
+      "13.3-inch FHD+ Display",
+      "Intel Core i7 12th Gen",
+      "16GB RAM",
+      "512GB SSD",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "L002",
+    "product_title": "Apple MacBook Air M2",
+    "product_image": "https://i.ibb.co.com/7YsqFDd/Apple-Mac-Book-Air-M2.jpg",
+    "category": "Laptops",
+    "price": 1199,
+    "description": "Lightweight and powerful with the latest M2 chip for seamless performance.",
+    "specification": [
+      "13.6-inch Liquid Retina Display",
+      "Apple M2 Chip",
+      "8GB RAM",
+      "256GB SSD",
+      "macOS Ventura"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "L003",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co.com/3ywZ0sj/HP-Spectre-x360.jpg",
+    "category": "Laptops",
+    "price": 1249,
+    "description": "Premium 2-in-1 laptop with sleek design and superior performance.",
+    "specification": [
+      "14-inch Touchscreen 4K UHD Display",
+      "Intel Core i7 11th Gen",
+      "16GB RAM",
+      "1TB SSD",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "L004",
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://i.ibb.co.com/RNyPHVh/Lenovo-Think-Pad-X1-Carbon.jpg",
+    "category": "Laptops",
+    "price": 1399,
+    "description": "Business laptop with exceptional build quality and performance.",
+    "specification": [
+      "14-inch WQHD Display",
+      "Intel Core i7 12th Gen",
+      "16GB RAM",
+      "512GB SSD",
+      "Windows 11 Pro"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "S001",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://i.ibb.co.com/LQKMt53/Galaxy-S23-Ultra-Green-3380.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "Flagship smartphone with top-tier performance and camera.",
+    "specification": [
+      "6.8-inch Dynamic AMOLED 2X Display",
+      "Snapdragon 8 Gen 2",
+      "12GB RAM",
+      "256GB Storage",
+      "200MP Camera System"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "S002",
+    "product_title": "Google Pixel 8 Pro",
+    "product_image": "https://i.ibb.co.com/zn9Y658/Google-Pixel-8-Pro.jpg",
+    "category": "Smartphones",
+    "price": 999,
+    "description": "Pure Android experience with AI-powered camera.",
+    "specification": [
+      "6.7-inch LTPO OLED Display",
+      "Google Tensor G3",
+      "12GB RAM",
+      "256GB Storage",
+      "Triple-camera System with AI Enhancements"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "S003",
+    "product_title": "OnePlus 12",
+    "product_image": "https://i.ibb.co.com/bHHLVQr/One-Plus-12.jpg",
+    "category": "Smartphones",
+    "price": 849,
+    "description": "Flagship killer with powerful specs and smooth user experience.",
+    "specification": [
+      "6.7-inch AMOLED Display",
+      "Snapdragon 8 Gen 2",
+      "16GB RAM",
+      "256GB Storage",
+      "50MP Triple Camera System"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "A001",
+    "product_title": "Sony WH-1000XM5",
+    "product_image": "https://i.ibb.co.com/CW2w1Vj/Sony-WH-1000-XM5.jpg",
+    "category": "Accessories",
+    "price": 399,
+    "description": "Industry-leading noise-cancelling headphones for immersive sound.",
+    "specification": [
+      "Noise Cancellation",
+      "30-Hour Battery Life",
+      "Quick Charging",
+      "Bluetooth 5.2",
+      "Touch Controls"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "A002",
+    "product_title": "Apple AirPods Pro 2nd Gen",
+    "product_image": "https://i.ibb.co.com/6WvQBrZ/airpods-pro-2nd-generation-01-500x500.webp",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Premium wireless earbuds with active noise cancellation and spatial audio.",
+    "specification": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency",
+      "6-Hour Battery Life",
+      "MagSafe Charging",
+      "IPX4 Water Resistance"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "A003",
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co.com/B20zMqP/images.jpg",
+    "category": "Accessories",
+    "price": 99,
+    "description": "Ergonomic wireless mouse designed for productivity and precision.",
+    "specification": [
+      "Ergonomic Design",
+      "Silent Clicks",
+      "8K DPI Sensor",
+      "USB-C Rechargeable",
+      "Multi-Device Connectivity"
+    ],
+    "availability": true,
+    "rating": 4.7
+  }
+]

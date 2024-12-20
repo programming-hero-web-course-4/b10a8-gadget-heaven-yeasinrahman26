@@ -1,12 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainLayout from './assets/components/MainLayout';
-import Home from './assets/components/Home';
-import Statistics from './assets/components/Pages/Statistics';
-import Dashboard from './assets/components/Pages/Dashboard';
-import About from './assets/components/Pages/About';
+import MainLayout from "./assets/components/MainLayout";
+import Home from "./assets/components/Pages/homePage/Home";
+import Statistics from "./assets/components/Pages/Statistics";
+import Dashboard from "./assets/components/Pages/Dashboard";
+import About from "./assets/components/Pages/About";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +37,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

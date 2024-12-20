@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const GadgetDetails = () => {
@@ -20,6 +21,9 @@ const GadgetDetails = () => {
     
     return (
       <div className="relative">
+        <Helmet>
+          <title>Gadget | GadgetDetails </title>
+        </Helmet>
         <div className="bg-[#9538E2] h-96 text-center ">
           <h1 className="pb-5 pt-4 text-2xl text-white font-bold">
             Product Details

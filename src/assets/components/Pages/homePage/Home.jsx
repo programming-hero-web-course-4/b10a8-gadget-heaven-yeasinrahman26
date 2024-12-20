@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import banner from "../../../img/banner.jpg"
 import GadgetSection from "./GadgetSection";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Gadget | Home </title>
+      </Helmet>
       <header className="bg-[#9538E2] flex flex-col justify-center items-center">
         {/* header text part start */}
         <div className="space-y-10">
@@ -38,7 +42,7 @@ const Home = () => {
       {/* img section */}
 
       {/* Add some spacing below the header for content */}
-      <div className="h-[300px]"></div>
+      <div className="md:h-[300px]"></div>
       {/* gadget card section  */}
       <section className=" mt-20">
         <h1 className="text-5xl text-center font-bold ">

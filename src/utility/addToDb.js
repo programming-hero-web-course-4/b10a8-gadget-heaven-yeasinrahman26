@@ -42,4 +42,4 @@ const addToWish = (id) => {
   }
 };
 
-export { addToCart, addToWish, getStoredCart };
+export { addToCart, addToWish, getStoredCart, getStoredWish };

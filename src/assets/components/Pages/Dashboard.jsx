@@ -3,11 +3,13 @@ import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { getStoredCart } from "../../../utility/addToDb";
+import { getStoredCart, getStoredWish } from "../../../utility/addToDb";
 import Cart from "./homePage/Cart";
+import Wish from "./homePage/Wish";
 
 const Dashboard = () => {
   const [cart, setCart] = useState([]);
+  const [wish, SetWish] = useState([]);
 
   const gadgets = useLoaderData();
 
@@ -18,7 +20,14 @@ const Dashboard = () => {
       storedCart.includes(gadget.product_id)
     );
     setCart(readCartList);
-    console.log(storedCart,gadgets);
+    console.log(storedCart, gadgets);
+  }, []);
+  useEffect(() => {
+    const storedWish = getStoredWish();
+    const wishList = gadgets.filter((gadget) =>
+      storedWish.includes(gadget.product_id)
+    );
+    SetWish(wishList);
   }, []);
   return (
     <div>
@@ -34,7 +43,7 @@ const Dashboard = () => {
           level. From smart devices to <br /> the coolest accessories, we have
           it all!
         </p>
-        <Tabs className={''}>
+        <Tabs className={""}>
           <TabList className={"bg-[#9538E2] mx-[25%] lg:mx-[45%] "}>
             <Tab>Cart</Tab>
             <Tab>WishList</Tab>
@@ -50,7 +59,12 @@ const Dashboard = () => {
           </TabPanel>
 
           <TabPanel className={"bg-white"}>
-            <h2 className="text-2xl font-semibold">WishList</h2>
+            <h2 className="text-2xl font-semibold">WishList: {wish.length}</h2>
+            <div className="w-[70%] mx-auto space-y-5">
+              {wish.map((wish, idx) => (
+                <Wish key={idx} wish={wish}></Wish>
+              ))}
+            </div>
           </TabPanel>
         </Tabs>
       </div>

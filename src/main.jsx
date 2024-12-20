@@ -9,6 +9,9 @@ import Dashboard from "./assets/components/Pages/Dashboard";
 import About from "./assets/components/Pages/About";
 import GadgetDetails from "./assets/components/Pages/GadgetDetails";
 import { HelmetProvider } from "react-helmet-async";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +53,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
       <RouterProvider router={router} />
+      <ToastContainer position="top-center" />
     </HelmetProvider>
   </StrictMode>
 );

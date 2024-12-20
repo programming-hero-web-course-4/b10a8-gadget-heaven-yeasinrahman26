@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { addToCart, addToWish,  } from "../../../utility/addToDb";
 
 
 const GadgetDetails = () => {
@@ -18,6 +19,13 @@ const GadgetDetails = () => {
       availability,
       rating,
     } = gadget;
+
+    const handleAdd=(id)=>{
+        addToCart(id)
+    }
+    const handleWish=(id)=>{
+        addToWish(id)
+    }
     
     return (
       <div className="relative">
@@ -100,10 +108,15 @@ const GadgetDetails = () => {
               </p>
             </p>
             <div className="space-x-4">
-              <button className="btn rounded-2xl text-white bg-[#9538E2]">
+              <button
+                onClick={() => handleAdd(product_id)}
+                className="btn rounded-2xl text-white bg-[#9538E2]"
+              >
                 Add to the card <FaShoppingCart />{" "}
               </button>
-              <button className="btn">
+              <button onClick={()=>{
+                handleWish(product_id)
+              }} className="btn">
                 <FaHeart />
               </button>
             </div>

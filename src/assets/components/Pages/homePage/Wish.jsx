@@ -2,7 +2,7 @@ const Wish = ({ wish }) => {
   const { product_title, product_image, price,category, description } = wish;
   return (
     <div className="bg-base-300 rounded-2xl ">
-      <div className="flex ">
+      <div className="flex flex-col md:flex-row ">
         <div className="max-w-52 rounded">
           <img src={product_image} className="p-5 " alt="" />
         </div>

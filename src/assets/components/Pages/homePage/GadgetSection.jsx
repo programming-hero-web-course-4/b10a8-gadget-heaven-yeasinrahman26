@@ -8,7 +8,7 @@ const GadgetSection = () => {
         <aside className=" mb-5 md:col-span-2 md:mb-0  ">
             <LeftNavbar></LeftNavbar>
         </aside>
-        <section className=" md:col-span-8 bg-yellow-500 ">
+        <section className=" md:col-span-8  ">
           <Gadgets></Gadgets>
         </section>
       </main>

@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredCart, getStoredWish } from "../../../utility/addToDb";
 import Cart from "./homePage/Cart";
 import Wish from "./homePage/Wish";
+import icon2 from '../../img/Group.png'
 
 const Dashboard = () => {
   const [cart, setCart] = useState([]);
   const [wish, SetWish] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   const gadgets = useLoaderData();
+   const navigate = useNavigate();
 
   useEffect(() => {
     const storedCart = getStoredCart();
@@ -30,6 +33,20 @@ const Dashboard = () => {
     SetWish(wishList);
   }, []);
    const totalCost = cart.reduce((total, item) => total + item.price, 0);
+
+   const sortCartByPrice = () => {
+     const sortedCart = [...cart].sort((a, b) => b.price - a.price);
+     setCart(sortedCart);
+   };
+   const handlePurchase = () => {
+     setShowModal(true);
+     setCart([]);
+   };
+
+   const handleCloseModal = () => {
+     setShowModal(false);
+     navigate("/");
+   };
   return (
     <div>
       <Helmet>
@@ -53,14 +70,25 @@ const Dashboard = () => {
           <TabPanel className={"bg-white "}>
             <div className="flex py-4 justify-between ">
               <h2 className="text-2xl font-semibold">Cart: {cart.length}</h2>
-              <div className="flex items-center gap-5">
+              <div className="flex px-4 md:px-0 flex-col-reverse md:flex-row items-center gap-5">
                 <h1 className="font-semibold text-xl">
                   Total cost: <span className="font-bold">{totalCost}$</span>{" "}
                 </h1>
-                <button className="btn text-[#9538E2] border-2 border-[#9538E2]">
+                <button
+                  onClick={sortCartByPrice}
+                  className="btn text-[#9538E2] border-2 border-[#9538E2]"
+                >
                   Short by Price
                 </button>
-                <button className="btn bg-[#9538E2] text-white">
+                <button
+                  onClick={handlePurchase}
+                  disabled={cart.length === 0}
+                  className={`btn ${
+                    cart.length > 0
+                      ? "bg-[#9538E2] text-white"
+                      : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                  }`}
+                >
                   Purchase
                 </button>
               </div>
@@ -84,6 +112,24 @@ const Dashboard = () => {
           </TabPanel>
         </Tabs>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg p-8">
+            <img className="mx-auto" src={icon2} alt="" />
+            <h2 className="text-2xl font-semibold text-center">
+              Payment Successfully
+            </h2>
+            <p className="text-center mt-4">Thanks for purchasing.</p>
+            {/* <p className="text-center mt-4">Total: {totalCost}$</p> */}
+            <button
+              onClick={handleCloseModal}
+              className="btn bg-[#9538E2] text-white w-full mt-6"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 const Wish = ({ wish }) => {
-  const { product_title, product_image, price, description } = wish;
+  const { product_title, product_image, price,category, description } = wish;
   return (
     <div className="bg-base-300 rounded-2xl ">
       <div className="flex ">
@@ -10,6 +10,7 @@ const Wish = ({ wish }) => {
           <h1 className="text-2xl font-semibold">{product_title}</h1>
           <p className="text-lg font-medium">{description}</p>
           <p className="text-lg font-medium">Price: {price}$</p>
+          <p className="text-lg font-medium"> {category}</p>
         </div>
       </div>
     </div>

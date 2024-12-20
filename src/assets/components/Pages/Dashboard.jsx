@@ -29,6 +29,7 @@ const Dashboard = () => {
     );
     SetWish(wishList);
   }, []);
+   const totalCost = cart.reduce((total, item) => total + item.price, 0);
   return (
     <div>
       <Helmet>
@@ -50,7 +51,20 @@ const Dashboard = () => {
           </TabList>
 
           <TabPanel className={"bg-white "}>
-            <h2 className="text-2xl font-semibold">Cart {cart.length}</h2>
+            <div className="flex py-4 justify-between ">
+              <h2 className="text-2xl font-semibold">Cart: {cart.length}</h2>
+              <div className="flex items-center gap-5">
+                <h1 className="font-semibold text-xl">
+                  Total cost: <span className="font-bold">{totalCost}$</span>{" "}
+                </h1>
+                <button className="btn text-[#9538E2] border-2 border-[#9538E2]">
+                  Short by Price
+                </button>
+                <button className="btn bg-[#9538E2] text-white">
+                  Purchase
+                </button>
+              </div>
+            </div>
             <div className="w-[70%] mx-auto space-y-5">
               {cart.map((cart, idx) => (
                 <Cart key={idx} cart={cart}></Cart>
@@ -59,7 +73,9 @@ const Dashboard = () => {
           </TabPanel>
 
           <TabPanel className={"bg-white"}>
-            <h2 className="text-2xl font-semibold">WishList: {wish.length}</h2>
+            <h2 className="text-2xl py-4 font-semibold">
+              WishList: {wish.length}
+            </h2>
             <div className="w-[70%] mx-auto space-y-5">
               {wish.map((wish, idx) => (
                 <Wish key={idx} wish={wish}></Wish>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../../img/banner.jpg"
 import GadgetSection from "./GadgetSection";
 
@@ -17,9 +18,11 @@ const Home = () => {
             have it all!
           </p>
           <div className="text-center pb-20">
-            <button className="btn text-[#9538E2] text-xl rounded-3xl px-10 my-5">
-              Shop Now
-            </button>
+            <Link to={'/dashboard'}>
+              <button className="btn text-[#9538E2] text-xl rounded-3xl px-10 my-5">
+                Shop Now
+              </button>
+            </Link>
           </div>
           <div className=" relative">
             <div className="absolute -top-32">
@@ -41,7 +44,7 @@ const Home = () => {
         <h1 className="text-5xl text-center font-bold ">
           Explore Cutting-Edge Gadgets
         </h1>
-        <section >
+        <section>
           <GadgetSection></GadgetSection>
         </section>
       </section>

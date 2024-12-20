@@ -1,8 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 
 
 const Navbar = () => {
+  const location=useLocation();
+  const isHome=location.pathname === '/'
 
         const links = (
           <>
@@ -25,7 +27,7 @@ const Navbar = () => {
     
 
     return (
-      <div className="navbar bg-[#9538E2]">
+      <div className={`navbar ${isHome ? "bg-[#9538E2]" : "bg-white"}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +53,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <Link to={'/'} className="text-white lg:ml-10 font-bold text-xl">Gadget Heaven</Link>
+          <Link to={"/"} className="text-white lg:ml-10 font-bold text-xl">
+            Gadget Heaven
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
